@@ -1,0 +1,157 @@
+.fotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0 1rem;
+}
+
+.fotos img {
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(1rem, 4vw, 3rem); 
+    width: 100%;                  
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;     
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;    
+    align-items: center;                 
+}
+
+.card p {
+    margin: 0;
+}
+
+.card img {
+    width: 100%;               
+    height: 300px;               
+    object-fit: cover;            
+}
+
+/* VERLEIH SECTION */
+
+.verleihSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 2rem;            
+    width: 100%;
+    margin: 3rem auto;
+}
+
+.verleihSectionText {
+    flex: 1;              /* Nimmt etwas weniger als die Hälfte ein */
+    max-width: 500px;     /* Verhindert, dass der Text zu breit wird und dem Bild Platz raubt */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+.verleihSectionText p,
+.verleihSectionText h1,
+.verleihSectionText h3 {
+    margin: 0 5 0 5rem;
+}
+
+/* 1. RECHTE SPALTE BILD-CONTAINER */
+.verleihSectionBild {
+    flex: 1.2;            /* Gibt dem Bild etwas MEHR Platz als dem Text (grösser!) */
+    display: flex;
+    justify-content: flex-end; /* WICHTIG: Drückt alles ganz nach RECHTS! */
+    align-items: center;
+}
+
+.verleihSectionBild .Verleih {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Richtet auch das innere Element rechts aus */
+}
+
+/* 2. DAS EIGENTLICHE BILD */
+.verleihSectionBild img {
+    width: 100% !important;
+    height: 600px !important;
+    object-fit: cover;    
+    border-radius: 12px;  
+}
+
+.überuns img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.kontakt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 2rem;            
+    width: 100%;
+    height: 15rem;
+    margin: 3rem auto;
+    background-color: #1a1a1a;
+}
+.kontakt h1 {
+    flex: 1;
+    margin: 0 0 0 5rem;
+}
+
+.orangeBtn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  margin: 5 5 5 5rem;
+  width: 400px;
+  
+  background-color: #f77f00; 
+  color: #ffffff;           
+  font-size: 1.125rem;     
+  font-weight: 600;      
+  text-decoration: none;   
+  text-align: center;
+  
+  border-radius: 12px;      
+  border: none;
+  cursor: pointer;
+  
+  transition: all 0.2s ease-in-out;
+}
+
+.orangeBtn:hover {
+  background-color: #e07000;
+  transform: translateY(-2px);
+}
+
+.orangeBtn:active {
+  transform: translateY(0);
+}
+
+
+
+/* ==========================================
+   SMARTPHONE LAYOUT (unter 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+    .cards {
+        display: flex;
+        /* 1. STANDARD FÜRS HANDY: Untereinander */
+        flex-direction: column; 
+        gap: 1.5rem; 
+        width: 100%;                  
+        max-width: 1200px;            
+        margin: 0 auto;             
+    }
+}

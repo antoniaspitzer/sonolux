@@ -1,0 +1,107 @@
+/* Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #16171a;
+  padding: 2rem 3rem;
+  height: 130px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Links Layout */
+.navLinks {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* 
+  DYNAMISCHER ABSTAND (Der Key-Fix!):
+  clamp(Min, Ideal, Max) 
+  - Auf großen Screens geht es bis max. 15rem hoch.
+  - Auf Tablets schrumpft der Abstand automatisch stufenlos bis auf 1.5rem runter, 
+    OHNE dass jemals etwas ins Logo ragt!
+*/
+.navLeft {
+  justify-content: flex-start;
+  gap: clamp(1.5rem, 8vw, 15rem);
+}
+
+.navLeft a:first-child {
+  margin-left: 5rem; 
+}
+
+.navRight {
+  justify-content: flex-end;
+  gap: clamp(1.5rem, 8vw, 15rem);
+}
+
+.navRight a:last-child {
+  margin-right: 5rem; 
+}
+
+/* Link Styling */
+.navLinks a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 200;
+  white-space: nowrap; /* Verhindert Zeilenumbruch im Text */
+  transition: color 0.2s ease-in-out;
+}
+
+.navLinks a:hover {
+  color: #e67e00;
+}
+
+/* Logo Wrapper */
+.navLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0 1rem;
+}
+
+.navLogo img {
+  object-fit: contain;
+  height: auto;
+  width: 350px;
+}
+
+
+/* ==========================================
+   SMARTPHONE LAYOUT (unter 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .navLogo {
+    width: 100%;
+    order: 1;
+    margin: 0 0 0.5rem 0;
+  }
+  .navLogo img {
+    height: 100%;
+    width: 250px;
+  }
+
+  /* Schaltet die Ordner-Struktur für Smartphone auf 1 Zeile um */
+  .navLeft, .navRight {
+    display: contents; 
+  }
+
+  .navbar a {
+    order: 2;
+    font-size: 0.85rem;
+    margin: 0 0.6rem !important;
+  }
+}

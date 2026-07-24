@@ -1,0 +1,123 @@
+.footer {
+  width: 100%;
+  background-color: #1F1F23; /* Dein dunkler Hintergrund */
+  color: #ededed;
+  padding: 0 1rem 4rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Subtile Trennlinie oben */
+.divider {
+  width: 100%;
+  max-width: 1200px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0 auto 3.5rem auto;
+}
+
+/* Haupt-Container mit max-width zentriert */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Logo & Socials */
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.logoOrange {
+  color: #f77f00; /* Der gewohnte Orangeton */
+}
+
+.logoWhite {
+  color: #a1a1aa;
+  font-weight: 400;
+}
+
+/* Social Media Icons */
+.socials {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.socials a {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Rechte Spalten Ausrichtung */
+.linksWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.column h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem 0;
+  color: #ffffff;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.column a,
+.column span {
+  color: #71717a; /* Das dezente Dunkelgrau für die Footer-Links */
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.column a:hover {
+  color: #ffffff; /* Leuchtet auf beim Drüberfahren */
+}
+
+/* ==========================================
+   SMARTPHONE LAYOUT (unter 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .linksWrapper {
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+  }
+}
