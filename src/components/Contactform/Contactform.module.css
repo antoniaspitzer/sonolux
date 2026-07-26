@@ -1,0 +1,107 @@
+/* Haupt-Wrapper zentrieren & begrenzen */
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.wrapper h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+/* Formular-Layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Abstand zwischen den Input-Blöcken */
+  width: 100%;
+}
+
+/* Zweispaltige Zeile für Vor- und Nachname */
+.row {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.row .inputGroup {
+  flex: 1; /* Beide Felder nehmen jeweils 50% ein */
+}
+
+/* Einzelne Formular-Gruppe (Label + Input) */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.inputGroup label {
+  color: #e4e4e7;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Eingabefelder und Textarea-Styling */
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  background-color: #33343a; /* Der dunkle Grauton aus dem Bild */
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Placeholder Farbe */
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+  color: #71717a;
+}
+
+/* Focus-Zustand beim Reinklicken */
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: #f77f00; /* Leuchter im Firmen-Orange beim Tippen */
+  background-color: #3b3c43;
+}
+
+.inputGroup textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+/* Button Zentrierung */
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Falls dein orange-button volle Breite im Container braucht */
+.buttonWrapper :global(.orange-button) {
+  min-width: 300px;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+}
+
+/* Responsive Anpassung für Smartphones */
+@media (max-width: 640px) {
+  .row {
+    flex-direction: column; /* Auf dem Handy Vor- & Nachname untereinander */
+    gap: 1.5rem;
+  }
+
+  .buttonWrapper :global(.orange-button) {
+    width: 100%; /* Volle Breite auf Mobilgeräten */
+  }
+}
