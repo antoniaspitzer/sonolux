@@ -1,0 +1,137 @@
+.container {
+  width: 100%;
+  color: #ffffff;
+}
+
+/* ==========================================
+   HERO / HEADER SECTION
+   ========================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  /* Füge hier dein Hero-Hintergrundbild ein */
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+              url('/images/hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.heroContent {
+  max-width: 700px;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+}
+
+.heroContent p {
+  font-size: 1.15rem;
+  color: #d1d5db;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================
+   CARDS WRAPPER & LAYOUT
+   ========================================== */
+.sectionsWrapper {
+  max-width: 1100px;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem; /* Abstand zwischen den einzelnen Reihen */
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Einzelne Karte / Zeile */
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+}
+
+/* Textspalte */
+.texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.texts h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+}
+
+.texts p {
+  color: #d8d8dd; /* Dezentes Hellgrau */
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+/* Bildspalte */
+.images {
+  flex: 1;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.images img {
+  width: 100% !important;
+  height: 280px !important;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.02);
+}
+
+/* ==========================================
+   RESPONSIVE (SMARTPHONE & TABLET)
+   ========================================== */
+@media (max-width: 868px) {
+  .hero {
+    height: 300px;
+  }
+  
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .sectionsWrapper {
+    margin: 3rem auto;
+    gap: 3.5rem;
+  }
+
+  /* Auf Mobilgeräten Bild immer OBERHALB vom Text anzeigen */
+  .card {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .texts {
+    align-items: flex-start;
+  }
+
+  .images img {
+    height: 220px !important;
+  }
+}

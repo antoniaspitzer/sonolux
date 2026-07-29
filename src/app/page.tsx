@@ -113,7 +113,7 @@ export default function Home() {
 
       <div className={styles.kontakt}>
         <h1>Trete mit uns in Kontakt!</h1>
-        <Link href="/contact" className="orange-btn">Kontakt</Link>
+        <Link href="/kontakt" className="orange-btn">Kontakt</Link>
         <Link href="/contact" className="white-btn">E-Mail schreiben</Link>
       </div>
     </>

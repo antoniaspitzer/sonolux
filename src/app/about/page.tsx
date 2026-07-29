@@ -1,8 +1,9 @@
 import Image from "next/image";
 import styles from "./about.module.css";
 import Link from "next/link";
+import Contact from "@/components/Contactform/Contactform";
 
-export default function Home() {
+export default function About() {
   return (
     <>
         <div className={styles.wrapper}>
@@ -31,6 +32,8 @@ export default function Home() {
             </div>
 
         </div>
+
+        <Contact />
     </>
   );
 };
