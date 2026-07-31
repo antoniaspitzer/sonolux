@@ -11,7 +11,7 @@ export default function Events() {
           Bei diesen Veranstaltungen waren wir dabei!
           <br />
           Machen Sie sich ein eigenes Bild von dem breiten Angebot, das wir Ihnen bieten.
-        </p>
+        </p> <br/>
       </section>
 
       {/* Großes Banner-Bild oben */}
