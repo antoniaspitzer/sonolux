@@ -1,0 +1,159 @@
+/* Haupt-Container mit exakt gleicher Max-Width wie der Rest der Site */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem 1.5rem;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* Header Bereich */
+.header h1 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+}
+
+.p {
+  margin-left: 0rem !important;
+}
+
+/* Oberes großes Hero-Bild */
+.heroImage {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.heroImage img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Textblöcke */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+/* 2-Spalten Bilderraster */
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.gridImageWrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gridImageWrapper img {
+  width: 100% !important;
+  height: 320px !important;
+  object-fit: cover;
+  display: block;
+}
+
+/* Galerie Sektion & h3 */
+.gallerySection {
+  margin-top: 4rem;
+}
+
+.galleryGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 3er Reihe */
+.rowThree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Allgemeines Quadrat-Bild */
+.squareImage {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.squareImage img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+}
+
+/* Breites Bild über die volle Breite */
+.fullWidthImage {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.fullWidthImage img {
+  width: 100% !important;
+  height: 400px !important;
+  object-fit: cover;
+  display: block;
+}
+
+/* Gemischte Reihe unten (Großes Bild links, 2 kleine rechts) */
+.mixedRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.largeImage {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.largeImage img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.stackedImages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Responsive für Mobilgeräte */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.25rem;
+  }
+
+  .twoColumnGrid,
+  .rowThree,
+  .mixedRow {
+    grid-template-columns: 1fr;
+  }
+
+  .gridImageWrapper img,
+  .fullWidthImage img,
+  .largeImage img {
+    height: 250px !important;
+  }
+}
