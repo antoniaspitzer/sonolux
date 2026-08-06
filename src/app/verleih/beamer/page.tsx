@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { fetchStrapi, getStrapiMedia } from "@/lib/strapi";
-import styles from "./verleih.module.css";
+import styles from "../verleih.module.css";
 
 export default async function VerleihPage() {
   // populate=* sorgt dafür, dass Strapi auch das Bild mitschickt!

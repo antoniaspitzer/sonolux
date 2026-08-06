@@ -27,7 +27,7 @@ export default function Verleih() {
               Alle Arten und Größen! Egal ob von Samsung oder Philipps. Größen von
               bis zu 98 Zoll ausleihen.
             </p>
-            <Link href="/displays" className="orange-btn">
+            <Link href="/verleih/displays" className="orange-btn">
               Hier zu den Displays
             </Link>
           </div>
@@ -58,7 +58,7 @@ export default function Verleih() {
               Ob für draußen oder drinnen, mit unseren Beamern kann nichts schief
               gehen!
             </p>
-            <Link href="/beamer" className="orange-btn">
+            <Link href="/verleih/beamer" className="orange-btn">
               Hier zu den Beamern
             </Link>
           </div>
@@ -72,7 +72,7 @@ export default function Verleih() {
               Egal ob Moving Heads oder Ambient Light. Wir haben die perfekten
               Lichter für Ihre Location!
             </p>
-            <Link href="/lightning" className="orange-btn">
+            <Link href="/verleih/lightning" className="orange-btn">
               Hier zu den Lichtern
             </Link>
           </div>
@@ -102,7 +102,7 @@ export default function Verleih() {
               Egal ob Open Air oder Orchestersaal, wir haben die passenden
               Mikrofone für Sie!
             </p>
-            <Link href="/mikrofone" className="orange-btn">
+            <Link href="/verleih/mikrofone" className="orange-btn">
               Hier zu den Mikrofonen
             </Link>
           </div>
