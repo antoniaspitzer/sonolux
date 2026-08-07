@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { fetchStrapi, getStrapiMedia } from "@/lib/strapi";
 import styles from "../verleih.module.css";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export default async function VerleihPage() {
-  // populate=* sorgt dafür, dass Strapi auch das Bild mitschickt!
   const response = await fetchStrapi("verleihs?populate=*");
-  const items = response.data;
+  const items = response?.data || [];
 
   return (
     <div className={styles.container}>
@@ -14,16 +14,19 @@ export default async function VerleihPage() {
 
       <div className={styles.sectionsWrapper}>
         {items.map((item: any) => {
-          const { title, slug, description, image } = item.attributes;
-          const imageUrl = getStrapiMedia(image?.data?.attributes?.url);
+          const { id, title, slug, description, pictures } = item;
+          
+          // Direktes Auslesen der Bild-URL
+          const imageUrl = getStrapiMedia(pictures?.[0]?.url);
 
           return (
-            <div key={item.id} className={styles.card}>
+            <div key={id} className={styles.card}>
               <div className={styles.texts}>
                 <h2>{title}</h2>
-                <p>{description}</p>
-                {/* Dynamischer Link basierend auf dem Strapi-Slug */}
-                <Link href={`/verleih/${slug}`} className="orange-btn">
+
+                {description && <BlocksRenderer content={description} />}
+
+                <Link href={`/verleih/beamer/${slug || id}`} className="orange-btn">
                   Hier zu {title}
                 </Link>
               </div>
@@ -32,7 +35,7 @@ export default async function VerleihPage() {
                 <div className={styles.images}>
                   <Image
                     src={imageUrl}
-                    alt={title}
+                    alt={title || "Verleih Bild"}
                     width={600}
                     height={400}
                   />
