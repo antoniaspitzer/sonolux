@@ -54,7 +54,7 @@ export default function Contactform() {
         </div>
         
         <div className={styles.buttonWrapper}>
-          <button type="submit" className="orange-btn">Submit</button>
+          <button type="submit" className="orange-btn">Abschicken</button>
         </div>
       </form>
     </div>

@@ -13,7 +13,7 @@ export default async function DisplayVerleihPage() {
 
   return (
     <div className={styles.container}>
-      <h1>Display</h1>
+      <h1>Displays</h1>
 
       <div className={styles.sectionsWrapper}>
         {items.map((item: any) => {

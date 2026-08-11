@@ -1,16 +1,50 @@
-.fotos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    margin: 0 1rem;
+/* ==========================================
+   SLIDER SECTION (CSS SCROLL SNAP)
+   ========================================== */
+
+.sliderContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.fotos img {
-    object-fit: contain;
-    height: auto;
-    width: 100%;
+.sliderTrack {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Blendet die unschöne Scrollbar aus */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
+
+.sliderTrack::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.slide {
+  flex: 0 0 100%; /* Jedes Bild nimmt genau 100% der Breite ein */
+  scroll-snap-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.slide img {
+  width: 100% !important;
+  height: 500px !important; /* Passt die Bildhöhe elegant an */
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ==========================================
+   RESTLICHES CSS (WIE VON DIR GEHABT)
+   ========================================== */
 
 .cards {
     display: flex;
@@ -52,8 +86,8 @@
 }
 
 .verleihSectionText {
-    flex: 1;              /* Nimmt etwas weniger als die Hälfte ein */
-    max-width: 500px;     /* Verhindert, dass der Text zu breit wird und dem Bild Platz raubt */
+    flex: 1;              
+    max-width: 500px;     
     display: flex;
     flex-direction: column;
     gap: 1.5rem; 
@@ -65,21 +99,19 @@
     margin: 0 5 0 5rem;
 }
 
-/* 1. RECHTE SPALTE BILD-CONTAINER */
 .verleihSectionBild {
-    flex: 1.2;            /* Gibt dem Bild etwas MEHR Platz als dem Text (grösser!) */
+    flex: 1.2;            
     display: flex;
-    justify-content: flex-end; /* WICHTIG: Drückt alles ganz nach RECHTS! */
+    justify-content: flex-end; 
     align-items: center;
 }
 
 .verleihSectionBild .Verleih {
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* Richtet auch das innere Element rechts aus */
+    justify-content: flex-end; 
 }
 
-/* 2. DAS EIGENTLICHE BILD */
 .verleihSectionBild img {
     width: 100% !important;
     height: 600px !important;
@@ -114,18 +146,15 @@
   padding: 1rem 2.5rem;
   margin: 5 5 5 5rem;
   width: 400px;
-  
   background-color: #f77f00; 
   color: #ffffff;           
   font-size: 1.125rem;     
   font-weight: 600;      
   text-decoration: none;   
   text-align: center;
-  
   border-radius: 12px;      
   border: none;
   cursor: pointer;
-  
   transition: all 0.2s ease-in-out;
 }
 
@@ -138,16 +167,13 @@
   transform: translateY(0);
 }
 
-
-
-/* ==========================================
-   SMARTPHONE LAYOUT (unter 768px)
-   ========================================== */
-
 @media (max-width: 768px) {
+    .slide img {
+        height: 300px !important; /* Kleinere Höhe auf Smartphones */
+    }
+
     .cards {
         display: flex;
-        /* 1. STANDARD FÜRS HANDY: Untereinander */
         flex-direction: column; 
         gap: 1.5rem; 
         width: 100%;                  
