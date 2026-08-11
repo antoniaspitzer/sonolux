@@ -4,16 +4,16 @@ import { fetchStrapi, getStrapiMedia } from "@/lib/strapi";
 import styles from "../verleih.module.css";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-export default async function BeamerVerleihPage() {
-  // Filtert nach "beamer" UND sortiert nach createdAt (neueste zuerst)
+export default async function LightningVerleihPage() {
+  // Filtert nach "lichter" UND sortiert nach createdAt (neueste zuerst)
   const response = await fetchStrapi(
-    "verleihs?filters[type][$eq]=beamer&sort=createdAt:desc&populate=*"
+    "verleihs?filters[type][$eq]=lichter&sort=createdAt:desc&populate=*"
   );
   const items = response?.data || [];
 
   return (
     <div className={styles.container}>
-      <h1>Beamer</h1>
+      <h1>Lichter</h1>
 
       <div className={styles.sectionsWrapper}>
         {items.map((item: any) => {
@@ -28,7 +28,7 @@ export default async function BeamerVerleihPage() {
 
                 {description && <BlocksRenderer content={description} />}
 
-                <Link href={`/verleih/beamer/${slug || id}`} className="orange-btn">
+                <Link href={`/verleih/lichter/${slug || id}`} className="orange-btn">
                   Hier zu {title}
                 </Link>
               </div>
@@ -37,7 +37,7 @@ export default async function BeamerVerleihPage() {
                 <div className={styles.images}>
                   <Image
                     src={imageUrl}
-                    alt={title || "Beamer Bild"}
+                    alt={title || "Lichter Bild"}
                     width={600}
                     height={400}
                   />

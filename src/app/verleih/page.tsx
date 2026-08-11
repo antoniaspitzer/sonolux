@@ -6,7 +6,7 @@ import Contact from "@/components/Contactform/Contactform";
 export default function Verleih() {
   return (
     <main className={styles.container}>
-      {/* Hero Banner mit Hintergrundbild */}
+      {/* Hero Banner */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>Verleih</h1>
@@ -17,9 +17,9 @@ export default function Verleih() {
         </div>
       </section>
 
-      {/* Sektion mit allen Verleih-Karten */}
+      {/* Verleih-Karten */}
       <section className={styles.sectionsWrapper}>
-        {/* 1. Displays (Text links, Bild rechts) */}
+        {/* 1. Displays */}
         <div className={styles.card}>
           <div className={styles.texts}>
             <h2>Displays</h2>
@@ -42,16 +42,8 @@ export default function Verleih() {
           </div>
         </div>
 
-        {/* 2. Beamer (Bild links, Text rechts) */}
+        {/* 2. Beamer */}
         <div className={styles.card}>
-          <div className={styles.images}>
-            <Image
-              src="/images/statisch1.jpeg"
-              alt="Beamer Verleih"
-              width={600}
-              height={400}
-            />
-          </div>
           <div className={styles.texts}>
             <h2>Beamer</h2>
             <p>
@@ -62,9 +54,17 @@ export default function Verleih() {
               Hier zu den Beamern
             </Link>
           </div>
+          <div className={styles.images}>
+            <Image
+              src="/images/statisch1.jpeg"
+              alt="Beamer Verleih"
+              width={600}
+              height={400}
+            />
+          </div>
         </div>
 
-        {/* 3. Licht (Text links, Bild rechts) */}
+        {/* 3. Licht */}
         <div className={styles.card}>
           <div className={styles.texts}>
             <h2>Licht</h2>
@@ -86,16 +86,8 @@ export default function Verleih() {
           </div>
         </div>
 
-        {/* 4. Mikrofone (Bild links, Text rechts) */}
+        {/* 4. Mikrofone */}
         <div className={styles.card}>
-          <div className={styles.images}>
-            <Image
-              src="/images/statisch1.jpeg"
-              alt="Mikrofone Verleih"
-              width={600}
-              height={400}
-            />
-          </div>
           <div className={styles.texts}>
             <h2>Mikrofone</h2>
             <p>
@@ -105,6 +97,14 @@ export default function Verleih() {
             <Link href="/verleih/mikrofone" className="orange-btn">
               Hier zu den Mikrofonen
             </Link>
+          </div>
+          <div className={styles.images}>
+            <Image
+              src="/images/statisch1.jpeg"
+              alt="Mikrofone Verleih"
+              width={600}
+              height={400}
+            />
           </div>
         </div>
       </section>

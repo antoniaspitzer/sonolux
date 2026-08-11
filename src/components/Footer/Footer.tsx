@@ -15,21 +15,6 @@ export default function Footer() {
             <span className={styles.logoOrange}>sonolux</span>{" "}
             <span className={styles.logoWhite}>GmbH</span>
           </div>
-
-          <div className={styles.socials}>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <FaFacebookF />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FaLinkedinIn />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <FaYoutube />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <FaInstagram />
-            </a>
-          </div>
         </div>
 
         {/* Rechte Spalten: Navigation & Kontakt */}
