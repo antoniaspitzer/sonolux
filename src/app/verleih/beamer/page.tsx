@@ -27,10 +27,6 @@ export default async function BeamerVerleihPage() {
                 <h2>{title}</h2>
 
                 {description && <BlocksRenderer content={description} />}
-
-                <Link href={`/verleih/beamer/${slug || id}`} className="orange-btn">
-                  Hier zu {title}
-                </Link>
               </div>
 
               {imageUrl && (

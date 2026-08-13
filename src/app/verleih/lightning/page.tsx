@@ -28,9 +28,6 @@ export default async function LightningVerleihPage() {
 
                 {description && <BlocksRenderer content={description} />}
 
-                <Link href={`/verleih/lichter/${slug || id}`} className="orange-btn">
-                  Hier zu {title}
-                </Link>
               </div>
 
               {imageUrl && (

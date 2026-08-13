@@ -1,4 +1,4 @@
-/* Haupt-Container mit exakt gleicher Max-Width wie der Rest der Site */
+/* Haupt-Container */
 .container {
   width: 100%;
   max-width: 1100px;
@@ -16,7 +16,7 @@
   color: #ffffff;
 }
 
-.p {
+.header p {
   margin: 0 auto;
 }
 
@@ -44,6 +44,10 @@
   margin-bottom: 2.5rem;
 }
 
+.textBlock p {
+  margin-left: 0;
+}
+
 /* 2-Spalten Bilderraster */
 .twoColumnGrid {
   display: grid;
@@ -65,78 +69,60 @@
   display: block;
 }
 
-/* Galerie Sektion & h3 */
+/* Galerie Sektion & Strapi-Grid */
 .gallerySection {
   margin-top: 4rem;
 }
 
+.gallerySection h1 {
+  margin-left: 0;
+}
+
 .galleryGrid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* 3er Reihe */
-.rowThree {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
-/* Allgemeines Quadrat-Bild */
-.squareImage {
-  width: 100%;
+/* Dynamische Strapi-Karten */
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.previewCard {
+  background: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
 }
 
-.squareImage img {
+.previewCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardImageWrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+
+.cardImageWrapper img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;
-  display: block;
 }
 
-/* Breites Bild über die volle Breite */
-.fullWidthImage {
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.fullWidthImage img {
-  width: 100% !important;
-  height: 400px !important;
-  object-fit: cover;
-  display: block;
-}
-
-/* Gemischte Reihe unten (Großes Bild links, 2 kleine rechts) */
-.mixedRow {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
-}
-
-.largeImage {
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.largeImage img {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 400px;
-  object-fit: cover;
-  display: block;
-}
-
-.stackedImages {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.cardDescription {
+  padding: 1.25rem;
+  margin: 0;
+  font-size: 1rem;
+  color: #d8d8dd;
+  line-height: 1.5;
 }
 
 /* Responsive für Mobilgeräte */
@@ -145,15 +131,11 @@
     font-size: 2.25rem;
   }
 
-  .twoColumnGrid,
-  .rowThree,
-  .mixedRow {
+  .twoColumnGrid {
     grid-template-columns: 1fr;
   }
 
-  .gridImageWrapper img,
-  .fullWidthImage img,
-  .largeImage img {
+  .gridImageWrapper img {
     height: 250px !important;
   }
 }

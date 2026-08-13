@@ -28,9 +28,6 @@ export default async function MikrofoneVerleihPage() {
 
                 {description && <BlocksRenderer content={description} />}
 
-                <Link href={`/verleih/mikrofone/${slug || id}`} className="orange-btn">
-                  Hier zu {title}
-                </Link>
               </div>
 
               {imageUrl && (

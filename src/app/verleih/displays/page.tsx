@@ -28,9 +28,6 @@ export default async function DisplayVerleihPage() {
 
                 {description && <BlocksRenderer content={description} />}
 
-                <Link href={`/verleih/displays/${slug || id}`} className="orange-btn">
-                  Hier zu {title}
-                </Link>
               </div>
 
               {imageUrl && (
