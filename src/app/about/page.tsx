@@ -13,9 +13,9 @@ export default function About() {
                 <p><em>Gründer der Sonolux GmbH</em></p>
 
                 <p>
-                Franz Spitzer ist ein alter Mann. Dadurch, dass er so alt ist, hat er viel supi Erfahrungen gesammelt. Aber weil er eben ein alter Mann ist braucht er oftmals Hilfe von seiner super tollen Tochter. Und manchmal auch vom Fabi.
+                Franz Spitzer verbindet langjährige Erfahrung mit einer großen Faszination für Ton, Licht und Veranstaltugnstechnik. Seine Leidenschaft für Eventtechnik begann mit dem Filmen und Schneiden von Hochzeiten und verschiedenen Veranstaltungen. Im Laufe der Jahre entwickelte sich daraus zunehmend seine Begeisterung für die Welt der Ton- und Lichttechnik. Auch seine Tätigkeit im Spielraum hat diese Begeisterung weiter verstärkt.
                 <br/><br/>
-                Er ist ein professioneller, krasser Dude. Er macht Tontechnik besser als jeder andere Dude. Nur bei Lichttechnik ist Fabi besser. Er ist fleißig und auch oft übermüdet. Er legt sich ins Zeug, sodass auch deine Veranstaltung funktioniert! Angefangen hat alles mit einem Digico Kurs. Papa wurde verzaubert. Dann hat er angefangen. Seit 3 Jahrzehnten macht er das jetzt. Also vertrau ihm, er kennt sich aus. Nur wenn er recht an stress hat is er manchmal sehr schweigsam. Ansonsten kann man gut mit ihm ratschen.
+                Durch seine langjährige Erfahrung als Ton- und Lichttechniker konnte Franz umfassendes Wissen und praktische Erfahrung sammeln, die er bei jedem Projekt professionell einsetzt. Dabei zeichnet ihn besonders seine spontane, hilfsbereite und erfahrene Art aus. Auch wenn einmal etwas nicht ganz nach Plan läuft, bewahrt er einen kühlen Kopf und findet schnell die bestmögliche Lösung.
                 </p><br/><br/>
             </div>
 
